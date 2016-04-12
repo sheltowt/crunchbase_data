@@ -1,7 +1,6 @@
 {
 	"crunchbase": {
-		"access_token": "place_holder",
-		"secret_token": "place_holder2"
+		"api_user_token": "place_holder"
 	},
 	"mongo_lab": {
 		"connection_string": "mongodb://<dbuser>:<dbpassword>@ds023540.mlab.com:23540/crunchbase_data"
