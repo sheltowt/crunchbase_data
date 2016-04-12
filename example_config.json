@@ -1,3 +1,6 @@
 {
-	""
+	"crunchbase": {
+		"access_token": "place_holder",
+		"secret_token": "place_holder2"
+	}
 }
