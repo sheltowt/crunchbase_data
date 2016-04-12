@@ -15,7 +15,7 @@ func main() {
 		log.Println(err.Error())
 	}
 
-	dataLoad := data_load.NewDataLoad(viper.GetString("crunchbase.api_user_token"), viper.GetString("crunchbase.mongo_lab"))
+	dataLoad := data_load.NewDataLoad(viper.GetString("mongo_lab.connection_string"), viper.GetString("crunchbase.api_user_token"))
 
 	err = dataLoad.PullFromCrunchbase()
 	if err != nil {

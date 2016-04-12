@@ -16,9 +16,9 @@ type DataLoad struct{
 }
 
 type CrunchBaseResponse struct{
-	MetaData interface{} `json:metadata`
-	Data interface{} `json:data`
-	Items []interface{} `json:items`
+	MetaData interface{} `json:"metadata"`
+	Data interface{} `json:"data"`
+	Items []interface{} `json:"items"`
 }
 
 func NewDataLoad(mongoConnection string, crunchBaseKey string) *DataLoad {
@@ -47,6 +47,7 @@ func(dataLoad DataLoad) PullFromCrunchbase() (err error) {
 		var dataResponse CrunchBaseResponse
 		err = json.Unmarshal(body, &dataResponse)
 		if err != nil {
+			log.Println(err.Error())
 			return err
 		}
 
