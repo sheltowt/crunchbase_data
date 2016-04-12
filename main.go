@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	viper.SetConfigName("example_config")
+	viper.SetConfigName("config")
 	viper.AddConfigPath("$GOPATH/src/github.com/crunchbase_data")
 	viper.SetConfigType("json")
 	err := viper.ReadInConfig()
